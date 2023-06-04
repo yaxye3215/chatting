@@ -4,18 +4,18 @@ const { verifyTokenAndAgent } = require("../middleware/verifyToken");
 
 
 // CREATE JOB
-router.post("/", verifyTokenAndAgent, jobController.createJob);
+router.post("/", jobController.createJob);
 
 
 // UPADATE JOB
-router.put("/:id", verifyTokenAndAgent, jobController.updateJob);
+router.put("/:id", jobController.updateJob);
 
 // DELETE JOB
 
-router.delete("/:id", verifyTokenAndAgent, jobController.deleteJob);
+router.delete("/:id", jobController.deleteJob);
 
 // GET JOB BY ID
-router.get("/:id", jobController.getJob);
+router.get("/:id",jobController.getJob);
 
 // GET ALL JOBS
 router.get("/", jobController.getAllJobs);
